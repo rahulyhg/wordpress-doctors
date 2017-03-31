@@ -15,7 +15,7 @@ body {
   .candidates-table th, .candidates-table td {
     text-align: center;
     padding: 8px;
-    width: 244px; }
+    width: 25%; }
   .candidates-table tr:nth-child(even) {
     background-color: #dddddd; }
   .candidates-table th {

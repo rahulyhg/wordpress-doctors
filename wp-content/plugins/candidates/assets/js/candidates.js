@@ -1,7 +1,5 @@
 var app = angular.module('myApp', []);
 app.controller('candidatesCtrl', function($scope, $http) {
-	
-	$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
     $http.get("/wp-content/plugins/candidates/controllers/candidates-controller.php")
     .then(function (response) {
@@ -11,14 +9,14 @@ app.controller('candidatesCtrl', function($scope, $http) {
     $scope.sortType = 'name'; // set the default sort type
 
     $scope.updateStatus = function (x) {
-    	console.log(x.id)
     	$http({
     		url: '/wp-content/plugins/candidates/controllers/status-controller.php',
     		method: "POST",
-    		data: { 'id' : x.id }
+    		data: { 'id' : x.id, 'status' : x.status },
+    		headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     	})
 	    .then(function (response) {
-	    	console.log(response)
+	    	(x.status == 0) ? x.status = 1 : x.status = 0;
 	    },
 	    function(response) { // optional
 	    	console.log(response)
