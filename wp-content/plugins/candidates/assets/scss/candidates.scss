@@ -1,5 +1,50 @@
 @import "mixins";
 
+body {
+	overflow-x: hidden;
+}
+#wpcontent {
+	padding-left: 0;
+}
+.col-sm-12 {
+	padding: 0;
+}
+
 .candidates-table {
+	width: 100%;
 	margin: auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+	th, td {
+	    text-align: center;
+	    padding: 8px;
+	    width: 244px;
+	}
+	tr:nth-child(even){background-color: $lightgray;}
+	th {
+	    color: white;
+		cursor: pointer;
+	    background-color: $black;
+	    &:hover {
+	    	opacity: .85;
+	    }
+	}
+}
+
+.status-btn {
+	width: 124px;
+	height: 42px;
+	color: white;
+	cursor: pointer;
+	line-height: 42px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	@include css3-prefix(border-radius, 4px);
+	&.pending {
+		background-color: $black;
+	}
+	&.approved {
+		background-color: cornflowerblue;
+	}
 }

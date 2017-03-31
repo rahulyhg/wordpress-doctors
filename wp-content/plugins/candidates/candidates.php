@@ -45,14 +45,3 @@ wp_enqueue_script( 'angular.js' );
 wp_enqueue_script( 'candidates.js' );
 
 ?>
-
-
-<!-- //    $wpdb->insert( 
-	// 	$table_name, 
-	// 	array( 
-	// 		'name' => "Miri",
-	// 		'surname' => "Sparrow",
-	// 		'email' => "sparrow@gmail.com",
-	// 		'registration_date' => current_time( 'mysql' )
-	// 	) 
-	// ); -->

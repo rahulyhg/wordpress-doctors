@@ -1,3 +1,48 @@
+body {
+  overflow-x: hidden; }
+
+#wpcontent {
+  padding-left: 0; }
+
+.col-sm-12 {
+  padding: 0; }
+
 .candidates-table {
-	margin: auto;
-}
+  width: 100%;
+  margin: auto;
+  table-layout: fixed;
+  border-collapse: collapse; }
+  .candidates-table th, .candidates-table td {
+    text-align: center;
+    padding: 8px;
+    width: 244px; }
+  .candidates-table tr:nth-child(even) {
+    background-color: #dddddd; }
+  .candidates-table th {
+    color: white;
+    cursor: pointer;
+    background-color: #23282d; }
+    .candidates-table th:hover {
+      opacity: .85; }
+
+.status-btn {
+  width: 124px;
+  height: 42px;
+  color: white;
+  cursor: pointer;
+  line-height: 42px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+  .status-btn.pending {
+    background-color: #23282d; }
+  .status-btn.approved {
+    background-color: cornflowerblue; }
+
+/*# sourceMappingURL=candidates.css.map */

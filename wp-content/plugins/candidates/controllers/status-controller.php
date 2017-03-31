@@ -1,4 +1,5 @@
 <?php
+    var_dump($_POST);
     $path = $_SERVER['DOCUMENT_ROOT'];
 
 	require_once $path . '/wp-config.php';
@@ -7,8 +8,8 @@
 	require_once $path . '/wp-includes/pluggable.php';
 	
 	$table_name = $wpdb->prefix . "candidates";
-    $result = $wpdb->get_results (" SELECT `id`, `name`, `surname`, `email`, `status`, `registration_date` FROM ".$table_name." ");
+    $result = $wpdb->get_results (" SELECT `name`, `surname`, `email`, `status`, `registration_date` FROM ".$table_name." ");
     
-    echo json_encode($result);
+	//$wpdb->update($table_name, array('status'=>$id), array('id'=>$id));
 
 ?>
