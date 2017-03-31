@@ -1,0 +1,16 @@
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+   -khtml-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+       -o-#{$property}: #{$value};
+          #{$property}: #{$value};
+}
+
+@mixin webkit-prefix($property, $value) {
+	-webkit-#{$property}: #{$value};
+			#{$property}: #{$value};
+}
+
+$brown: #825047;
+$green: #a5cd4a;
