@@ -1,6 +1,5 @@
 var ourLocation = window.location.href;
 var controllerPath = ( ourLocation.indexOf("benjamin400800.com") == -1 ) ? "/wp-content/plugins/candidates/controllers/" : "/doctors/wp-content/plugins/candidates/controllers/";
-console.log(controllerPath)
 
 var app = angular.module('myApp', []);
 app.controller('candidatesCtrl', function($scope, $http) {

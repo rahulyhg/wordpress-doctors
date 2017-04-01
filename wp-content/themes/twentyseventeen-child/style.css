@@ -1,0 +1,18 @@
+/*
+ Theme Name:   Twentyseventen child
+ Theme URI:    http://example.com/wheels/
+ Description:  Twentyseventen Child Theme
+ Author:       Benjamin Mordukhovich
+ Author URI:   http://example.com
+ Template:     twentyseventeen
+ Version:      1.0.0
+ Tags:
+ Text Domain:
+*/
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+body.page-two-column:not(.archive) #primary .entry-header,
+body.page-two-column:not(.archive) #primary .entry-content {
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

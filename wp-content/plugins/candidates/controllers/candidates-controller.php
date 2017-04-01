@@ -11,7 +11,7 @@
 	require_once $path . '/wp-includes/pluggable.php';
 
 	$table_name = $wpdb->prefix . "candidates";
-    $result = $wpdb->get_results (" SELECT `id`, `name`, `surname`, `email`, `status`, `registration_date` FROM ".$table_name." ");
+    $result = $wpdb->get_results (" SELECT * FROM ".$table_name." ");
     
     echo json_encode($result);
 

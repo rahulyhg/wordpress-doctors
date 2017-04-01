@@ -8,12 +8,18 @@
 					<tr>
 					    <th ng-click="sortType = 'name'">Full name</th>
 						<th ng-click="sortType = 'email'">Email</th>
-						<th ng-click="sortType = 'registration_date'">Registration Date</th>
+						<th ng-click="sortType = 'phone'">Phone</th>
+						<th ng-click="sortType = 'address'">Address</th>
+						<th ng-click="sortType = 'marital_status'">Marital Status</th>
+						<th ng-click="sortType = 'registration_date'">Registration date</th>
 						<th ng-click="sortType = 'status'">Status</th>
 					</tr>
 				 	<tr ng-repeat="x in candidates | orderBy:sortType ">
 						<td>{{ x.name }} {{ x.surname }}</td>
 						<td>{{ x.email }}</td>
+						<td>{{ x.phone }}</td>
+						<td>{{ x.address }}</td>
+						<td>{{ x.marital_status }}</td>
 						<td>{{ x.registration_date }}</td>
 						<td>
 							<span ng-click="updateStatus(x)" class="status-btn pending" ng-if='x.status==0'>Pending</span>
