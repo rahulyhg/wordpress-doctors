@@ -1,9 +1,9 @@
 <?php
 	
     $path = $_SERVER['DOCUMENT_ROOT'];
-    if (strpos($path, 'd400800') == true) {
-		$path += $path."/doctors";
-	}
+    if (strpos($path, 'd400800') !== false) {
+    	$path = $_SERVER['DOCUMENT_ROOT']."/doctors";
+    }
 
 	require_once $path . '/wp-config.php';
 	require_once $path . '/wp-load.php';
