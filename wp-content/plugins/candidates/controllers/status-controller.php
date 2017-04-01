@@ -1,7 +1,7 @@
 <?php
 	
     $path = $_SERVER['DOCUMENT_ROOT'];
-    if (strpos($path, 'benjamin400800.com') == true) {
+    if (strpos($path, 'd400800') == true) {
 		$path += $path."/doctors";
 	}
 
