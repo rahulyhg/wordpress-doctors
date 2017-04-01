@@ -16,10 +16,12 @@ app.controller('candidatesCtrl', function($scope, $http) {
     	$http({
     		url: controllerPath+'status-controller.php',
     		method: "POST",
-    		data: { 'id' : x.id, 'status' : x.status },
+    		// data: { 'id' : x.id, 'status' : x.status },
+            data: "id=" + x.id+"&"+"status=" + x.status,
     		headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     	})
 	    .then(function (response) {
+            console.log(response);
 	    	(x.status == 0) ? x.status = 1 : x.status = 0;
 	    },
 	    function(response) { // optional
