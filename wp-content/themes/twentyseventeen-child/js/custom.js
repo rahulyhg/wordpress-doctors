@@ -3,6 +3,8 @@ console.log("this is custom js")
 jQuery( document ).ready(function() {
 	jQuery(".wpcf7").on('wpcf7:mailsent', function(event){
 		console.log("form sent")
+		console.log( jQuery(this).find(".wpcf7-form").serialize() )
+		//location = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GLEFQQ8ZKQKT8';
 	});
 });
 
