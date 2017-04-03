@@ -1,0 +1,18 @@
+.wpcf7-form {
+	@include webkit-prefix(display, flex);
+	@include webkit-prefix(flex-wrap, wrap);
+	@include webkit-prefix(justify-content, space-between);
+	@include webkit-prefix(align-items, flex-end);
+	p {
+		width: 48.75%;
+	}
+	select {
+		width: 100%;
+	}
+	textarea {
+		height: 15vh;
+	}
+	label {
+		margin-bottom: 0;
+	}
+}

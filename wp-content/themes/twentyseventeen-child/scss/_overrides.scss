@@ -1,4 +1,16 @@
 body.page-two-column:not(.archive) #primary .entry-header,
-body.page-two-column:not(.archive) #primary .entry-content{
+body.page-two-column:not(.archive) #primary .entry-content {
 	width: 100%;
+}
+
+@media screen and (min-width: 48em) {
+	.wrap {
+		padding: 0;
+		max-width: 1170px;
+	}
+}
+#masthead .wrap {
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 1170px;
 }

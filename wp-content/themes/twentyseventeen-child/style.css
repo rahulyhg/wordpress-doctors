@@ -15,4 +15,31 @@ body.page-two-column:not(.archive) #primary .entry-header,
 body.page-two-column:not(.archive) #primary .entry-content {
   width: 100%; }
 
+@media screen and (min-width: 48em) {
+  .wrap {
+    padding: 0;
+    max-width: 1170px; } }
+#masthead .wrap {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1170px; }
+
+.wpcf7-form {
+  -webkit-display: flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-end;
+  align-items: flex-end; }
+  .wpcf7-form p {
+    width: 48.75%; }
+  .wpcf7-form select {
+    width: 100%; }
+  .wpcf7-form textarea {
+    height: 15vh; }
+  .wpcf7-form label {
+    margin-bottom: 0; }
+
 /*# sourceMappingURL=style.css.map */
