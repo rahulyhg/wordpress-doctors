@@ -1,42 +1,20 @@
-console.log("this is custom js")
+var ourLocation = window.location.href;
+var controllerUrl = ( ourLocation.indexOf("benjamin400800.com") == -1 ) ? "/wp-content/themes/twentyseventeen-child/controllers/registration-controller.php" : "/doctors//wp-content/themes/twentyseventeen-child/controllers/registration-controller.php";
 
 jQuery( document ).ready(function() {
 	jQuery(".wpcf7").on('wpcf7:mailsent', function(event){
+		jQuery.ajax({
+		    url: controllerUrl,
+		    type: "POST",
+		    data: jQuery(this).find(".wpcf7-form").serialize(), 
+		    beforeSend: function(){
+		    	console.log("before sending request")
+		    },
+		    success: function(data) {
+		        console.log(data)
+		    } 
+		});
 		console.log("form sent")
-		console.log( jQuery(this).find(".wpcf7-form").serialize() )
 		//location = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GLEFQQ8ZKQKT8';
 	});
 });
-
-// $.ajax({
-//     url: "/templates/modules/mail.controller.php",        // Url to which the request is send
-//     type: "POST",             // Type of request to be send, called as method
-//     data: { ajax:'sendMail', name:name, email:email, phone:phone, firm:firm, note:note, lang:lang }, 
-//     beforeSend: function(){
-//     	if (msie > -1 || trident > -1) {
-//     		$('.gi-loader.ie').addClass('show');
-//     	} else {
-//         	$('.gi-loader.not-ie').addClass('show');
-//     	}
-//     },
-//     success: function(data)   // A function to be called if request succeeds
-//     {
-//         $('.gi-loader').removeClass('show');
-//         if (data.trim() == '1') {
-// 				//form submitted
-// 			for (i = 0; i < fields.length; i++) {
-// 				if (fields[i].type != 'submit'){
-// 			    fields[i].value = '';
-// 				}
-// 			}
-// 			$('#message').value = '';
-// 			$('.msg-sent').addClass('reveal');
-// 			setTimeout(function(){
-// 			  $('.msg-sent').removeClass('reveal');
-// 			}, 5000);
-// 			} else {
-// 				//form not submitted
-// 				console.log(data);
-// 			}
-// 		}   
-// });
