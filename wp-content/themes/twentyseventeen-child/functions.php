@@ -11,6 +11,7 @@
 	    );
 	}
 	add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
 	// registering javascript files
 	function my_theme_enqueue_js() {
 	    wp_enqueue_script(
@@ -21,3 +22,6 @@
 	    );
 	}
 	add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_js' );
+
+	var_dump(get_stylesheet_directory_uri());
+	var_dump(get_template_directory_uri());

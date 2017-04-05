@@ -32,16 +32,20 @@ function candidates_dashboard() {
 }
 
 /** Including styles and scripts */
-wp_register_style( 'flexboxgrid.css', CANDIDATES__PLUGIN_URL . 'assets/css/flexboxgrid.css', array(), false );
-wp_register_style( 'candidates.css', CANDIDATES__PLUGIN_URL . 'assets/css/candidates.css', array(), false );
+function load_resources_candidates() {
+	wp_register_style( 'flexboxgrid.css', CANDIDATES__PLUGIN_URL . 'assets/css/flexboxgrid.css', array(), false );
+	wp_register_style( 'candidates.css', CANDIDATES__PLUGIN_URL . 'assets/css/candidates.css', array(), false );
 
-wp_enqueue_style( 'flexboxgrid.css');
-wp_enqueue_style( 'candidates.css');
+	wp_enqueue_style( 'flexboxgrid.css');
+	wp_enqueue_style( 'candidates.css');
 
-wp_register_script( 'angular.js', CANDIDATES__PLUGIN_URL . 'assets/js/angular.min.js', array(), false );
-wp_register_script( 'candidates.js', CANDIDATES__PLUGIN_URL . 'assets/js/candidates.js', array('angular.js'), false );
+	wp_register_script( 'angular.js', CANDIDATES__PLUGIN_URL . 'assets/js/angular.min.js', array(), false );
+	wp_register_script( 'candidates.js', CANDIDATES__PLUGIN_URL . 'assets/js/candidates.js', array('angular.js'), false );
 
-wp_enqueue_script( 'angular.js' );
-wp_enqueue_script( 'candidates.js' );
+	wp_enqueue_script( 'angular.js' );
+	wp_enqueue_script( 'candidates.js' );
+}
+
+add_action( 'admin_enqueue_scripts', 'load_resources_candidates' );
 
 ?>
