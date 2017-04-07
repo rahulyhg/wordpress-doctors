@@ -20,7 +20,7 @@ function sendFormData (formSubmitted) {
 function renderPayPalBtn () {
 	paypal.Button.render({
 	    
-	    env: 'sandbox', // Optional: specify 'production' environment
+	    env: 'production', // Optional: specify 'production' environment
 
 	    client: {
 	        sandbox:    'AZnETT6Z2J_PVghn5W69O4MGJdVOv96XPGA0JzhBGDtGL9anUzq2jPvIj5W27_5jC60hMla64scMAJVf',
