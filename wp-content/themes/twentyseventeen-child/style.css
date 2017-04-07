@@ -33,4 +33,7 @@ body.page-two-column:not(.archive) #primary .entry-content {
   .wpcf7-form label {
     margin-bottom: 0; }
 
+.paypal-container {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */
