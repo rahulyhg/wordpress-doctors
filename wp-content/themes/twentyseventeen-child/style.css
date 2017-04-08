@@ -36,4 +36,22 @@ body.page-two-column:not(.archive) #primary .entry-content {
 .paypal-container {
   display: none; }
 
+.candidates-table {
+  width: 100%;
+  margin: auto;
+  table-layout: fixed;
+  border-collapse: collapse; }
+  .candidates-table th, .candidates-table td {
+    text-align: center;
+    padding: 8px;
+    width: 25%; }
+  .candidates-table tr:nth-child(even) {
+    background-color: #dddddd; }
+  .candidates-table th {
+    color: white;
+    cursor: pointer;
+    background-color: #23282d; }
+    .candidates-table th:hover {
+      opacity: .85; }
+
 /*# sourceMappingURL=style.css.map */
