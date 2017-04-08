@@ -1,0 +1,26 @@
+.sidebar-posts {
+	h4 {
+		padding: 0;
+		margin-top: 2.5%;
+		font-weight: 400;
+		text-align: center;
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+	.sidebar-post-thumbnail {
+		margin-top: 10%;
+		a {
+			width: 100%;
+			display: block;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			&:after {
+				content: "";
+				display: block;
+				padding-bottom: 65%;
+			}
+		}
+	}
+}

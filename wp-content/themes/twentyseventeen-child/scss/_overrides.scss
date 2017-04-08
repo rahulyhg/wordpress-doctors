@@ -2,3 +2,7 @@ body.page-two-column:not(.archive) #primary .entry-header,
 body.page-two-column:not(.archive) #primary .entry-content {
 	width: 100%;
 }
+
+.has-sidebar:not(.error404) #primary {
+	width: 100%;
+}

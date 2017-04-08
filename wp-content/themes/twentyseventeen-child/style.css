@@ -15,6 +15,9 @@ body.page-two-column:not(.archive) #primary .entry-header,
 body.page-two-column:not(.archive) #primary .entry-content {
   width: 100%; }
 
+.has-sidebar:not(.error404) #primary {
+  width: 100%; }
+
 .wpcf7-form {
   -webkit-display: flex;
   display: flex;
@@ -53,5 +56,25 @@ body.page-two-column:not(.archive) #primary .entry-content {
     background-color: #23282d; }
     .candidates-table th:hover {
       opacity: .85; }
+
+.sidebar-posts h4 {
+  padding: 0;
+  margin-top: 2.5%;
+  font-weight: 400;
+  text-align: center; }
+  .sidebar-posts h4 a:hover {
+    text-decoration: underline; }
+.sidebar-posts .sidebar-post-thumbnail {
+  margin-top: 10%; }
+  .sidebar-posts .sidebar-post-thumbnail a {
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+    .sidebar-posts .sidebar-post-thumbnail a:after {
+      content: "";
+      display: block;
+      padding-bottom: 65%; }
 
 /*# sourceMappingURL=style.css.map */
