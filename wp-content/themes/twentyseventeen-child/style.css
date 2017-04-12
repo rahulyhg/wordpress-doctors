@@ -18,6 +18,18 @@ body.page-two-column:not(.archive) #primary .entry-content {
 .has-sidebar:not(.error404) #primary {
   width: 100%; }
 
+.section-image {
+  background-color: #dddddd; }
+  .section-image:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; }
+
+.section-content {
+  height: 100%; }
+  .section-content p {
+    margin: 0; }
+
 .wpcf7-form {
   -webkit-display: flex;
   display: flex;

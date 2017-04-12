@@ -17,9 +17,6 @@ $candidates = $wpdb->get_results ("
 	ORDER BY `registration_date` DESC
 ");
 
-$args = array( 'posts_per_page' => 5 );
-$lastposts = get_posts( $args );
-
 get_header(); ?>
 
 <div class="wrap">
@@ -48,16 +45,7 @@ get_header(); ?>
 					<?php endif; ?>
 				</div>
 				<div class="col-3">
-					<div class="sidebar-posts">
-						<h2>Recent stories:</h2>
-						<?php foreach ( $lastposts as $post ): setup_postdata( $post ); ?>
-							<div class="sidebar-post-thumbnail">
-								<a style="background-image: url(<?php the_post_thumbnail_url('medium_large'); ?>)" href="<?php the_permalink(); ?>"></a>
-							</div>
-							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-						<?php endforeach; 
-						wp_reset_postdata(); ?>
-					</div>
+					<?php sidebar_posts (5); ?>
 				</div>
 			</section>
 

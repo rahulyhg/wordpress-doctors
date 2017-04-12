@@ -1,0 +1,14 @@
+.section-image {
+	background-color: #dddddd;
+	&:after {
+		content: "";
+		display: block;
+		padding-bottom: 100%;
+	}
+}
+.section-content {
+	height: 100%;
+	p {
+		margin: 0;
+	}
+}
