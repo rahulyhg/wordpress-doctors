@@ -12,7 +12,7 @@ function sendFormData (formSubmitted) {
 	    success: function(data) {
 	    	console.log(data)
 	    	jQuery(".paypal-container").slideDown(800)
-			renderPayPalBtn ()
+			//renderPayPalBtn ()
 	    }
 	});
 }

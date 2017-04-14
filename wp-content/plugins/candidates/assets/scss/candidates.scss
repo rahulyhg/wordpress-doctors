@@ -19,8 +19,18 @@ body {
 	    text-align: center;
 	    padding: 8px;
 	    width: 25%;
+	    &.delete-heading {
+	    	width: 72px;
+	    }
 	}
-	tr:nth-child(even){background-color: $lightgray;}
+	tr {
+		&:nth-child(even){
+			background-color: $lightgray;
+		}
+		&:hover {
+			background-color: bisque;
+		}
+	}
 	th {
 	    color: white;
 		cursor: pointer;
@@ -28,6 +38,11 @@ body {
 	    &:hover {
 	    	opacity: .85;
 	    }
+	}
+	.delete-action {
+		color: crimson;
+		cursor: pointer;
+		
 	}
 }
 
@@ -46,5 +61,8 @@ body {
 	}
 	&.approved {
 		background-color: cornflowerblue;
+	}
+	&:hover {
+		@include css3-prefix(box-shadow, 1px 2px 2px 0px rgba(0,0,0,.4));
 	}
 }

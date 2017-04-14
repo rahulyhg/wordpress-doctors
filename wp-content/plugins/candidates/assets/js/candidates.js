@@ -1,22 +1,28 @@
 var ourLocation = window.location.href;
-var controllerPath = ( ourLocation.indexOf("benjamin400800.com") == -1 ) ? "/wp-content/plugins/candidates/controllers/" : "/doctors/wp-content/plugins/candidates/controllers/";
+var controllerPath = ( ourLocation.indexOf("benjamin400800.com") == -1 ) ? "/wp-content/plugins/candidates/controllers/candidates-controller.php" : "/doctors/wp-content/plugins/candidates/controllers/candidates-controller.php";
 
 var app = angular.module('myApp', []);
 app.controller('candidatesCtrl', function($scope, $http) {
 
-    $http.get(controllerPath+"candidates-controller.php")
+    $http.get(controllerPath)
     .then(function (response) {
     	$scope.candidates = response.data;
     });
 
     $scope.sortType = 'name'; // set the default sort type
 
+    $scope.getCandidates = function () {
+        $http.get(controllerPath)
+        .then(function (response) {
+            $scope.candidates = response.data;
+        });
+    }
+
     $scope.updateStatus = function (x) {
     	$http({
-    		url: controllerPath+'status-controller.php',
+    		url: controllerPath,
     		method: "POST",
-    		// data: { 'id' : x.id, 'status' : x.status },
-            data: "id=" + x.id+"&"+"status=" + x.status,
+            data: "id=" + x.id+"&status=" + x.status + "&action=updateStatus",
     		headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     	})
 	    .then(function (response) {
@@ -26,6 +32,22 @@ app.controller('candidatesCtrl', function($scope, $http) {
 	    function(response) { // optional
 	    	console.log(response)
 	    });
+    }
+
+    $scope.deleteItem = function (x) {
+        $http({
+            url: controllerPath,
+            method: "POST",
+            data: "id=" + x.id + "&action=deleteItem",
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        })
+        .then(function (response) {
+            console.log(response);
+            $scope.getCandidates();
+        },
+        function(response) { // optional
+            console.log(response)
+        });
     }
 
 });

@@ -16,14 +16,21 @@ body {
     text-align: center;
     padding: 8px;
     width: 25%; }
+    .candidates-table th.delete-heading, .candidates-table td.delete-heading {
+      width: 72px; }
   .candidates-table tr:nth-child(even) {
     background-color: #dddddd; }
+  .candidates-table tr:hover {
+    background-color: bisque; }
   .candidates-table th {
     color: white;
     cursor: pointer;
     background-color: #23282d; }
     .candidates-table th:hover {
       opacity: .85; }
+  .candidates-table .delete-action {
+    color: crimson;
+    cursor: pointer; }
 
 .status-btn {
   width: 124px;
@@ -44,5 +51,12 @@ body {
     background-color: #23282d; }
   .status-btn.approved {
     background-color: cornflowerblue; }
+  .status-btn:hover {
+    -webkit-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.4);
+    -khtml-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.4);
+    -ms-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.4); }
 
 /*# sourceMappingURL=candidates.css.map */
