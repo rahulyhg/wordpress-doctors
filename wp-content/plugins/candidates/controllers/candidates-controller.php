@@ -4,7 +4,7 @@
     if (strpos($path, 'd400800') !== false) {
         $path = $_SERVER['DOCUMENT_ROOT']."/doctors";
     }
-    
+
     require_once $path . '/wp-config.php';
     require_once $path . '/wp-load.php';
     require_once $path . '/wp-includes/wp-db.php';
@@ -29,7 +29,8 @@
             case 'deleteItem':
                 $id = $_POST["id"];
                 try {
-                    $wpdb->delete( $table_name, array( 'id' => $id ) );
+                    $wpdb->update($table_name, array( 'deleted'=> 1 ), array('id'=>$id));
+                    // $wpdb->delete( $table_name, array( 'id' => $id ) );
                     echo $id;
                 } catch (Exception $e) {
                     echo 'Caught exception: ',  $e->getMessage(), "\n";
@@ -41,7 +42,7 @@
         }
 
     } else {
-        $result = $wpdb->get_results (" SELECT * FROM ".$table_name." ");
+        $result = $wpdb->get_results (" SELECT * FROM $table_name WHERE `deleted` = 0 ");
         echo json_encode($result);
     }
 

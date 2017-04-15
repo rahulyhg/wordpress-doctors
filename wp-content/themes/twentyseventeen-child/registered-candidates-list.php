@@ -12,8 +12,9 @@
 $table_name = $wpdb->prefix . "candidates";
 $candidates = $wpdb->get_results ("
 	SELECT `name`, `surname`, `email`, `status`, `registration_date`
-	FROM $table_name 
-	WHERE $table_name.`status` = 1
+	FROM 	$table_name 
+	WHERE 	$table_name.`status` = 1
+	AND		$table_name.`deleted` = 0
 	ORDER BY `registration_date` DESC
 ");
 

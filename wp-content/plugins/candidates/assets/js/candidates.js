@@ -9,7 +9,8 @@ app.controller('candidatesCtrl', function($scope, $http) {
     	$scope.candidates = response.data;
     });
 
-    $scope.sortType = 'name'; // set the default sort type
+    $scope.sortType = 'name';       // set the default sort type
+    $scope.reverseValue = false;    // set the default reverse value
 
     $scope.getCandidates = function () {
         $http.get(controllerPath)
@@ -48,6 +49,17 @@ app.controller('candidatesCtrl', function($scope, $http) {
         function(response) { // optional
             console.log(response)
         });
+    }
+
+    $scope.callDialog = function (obj, msg, functionName) {
+        var action = confirm(msg);
+        if (action) {
+            if(functionName == "deleteItem") {
+                $scope.deleteItem(obj);
+            }
+        } else {
+            return false;
+        }
     }
 
 });

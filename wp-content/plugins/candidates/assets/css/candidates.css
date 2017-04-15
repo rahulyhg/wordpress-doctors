@@ -30,7 +30,30 @@ body {
       opacity: .85; }
   .candidates-table .delete-action {
     color: crimson;
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative; }
+    .candidates-table .delete-action i {
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 4px;
+      position: absolute;
+      display: inline-block;
+      background-color: crimson; }
+      .candidates-table .delete-action i:first-child {
+        -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        -khtml-transform: translate(-50%, -50%) rotate(45deg);
+        -moz-transform: translate(-50%, -50%) rotate(45deg);
+        -ms-transform: translate(-50%, -50%) rotate(45deg);
+        -o-transform: translate(-50%, -50%) rotate(45deg);
+        transform: translate(-50%, -50%) rotate(45deg); }
+      .candidates-table .delete-action i:last-child {
+        -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+        -khtml-transform: translate(-50%, -50%) rotate(-45deg);
+        -moz-transform: translate(-50%, -50%) rotate(-45deg);
+        -ms-transform: translate(-50%, -50%) rotate(-45deg);
+        -o-transform: translate(-50%, -50%) rotate(-45deg);
+        transform: translate(-50%, -50%) rotate(-45deg); }
 
 .status-btn {
   width: 124px;
