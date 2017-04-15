@@ -21,6 +21,12 @@ $candidates = $wpdb->get_results ("
 get_header(); ?>
 
 <div class="wrap">
+
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php twentyseventeen_edit_link( get_the_ID() ); ?>
+	</header><!-- .entry-header -->
+	
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			

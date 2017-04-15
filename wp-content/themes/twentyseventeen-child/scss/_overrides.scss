@@ -13,6 +13,9 @@ body.page-two-column:not(.archive) #primary .entry-header,
 body.page-two-column:not(.archive) #primary .entry-content {
 	width: 100%;
 }
+body.page:not(.twentyseventeen-front-page) .entry-title {
+	font-size: 1.5rem;
+}
 
 .has-sidebar:not(.error404) #primary {
 	width: 100%;
