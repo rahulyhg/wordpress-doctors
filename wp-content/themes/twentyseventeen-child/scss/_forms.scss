@@ -4,7 +4,7 @@
 	@include webkit-prefix(justify-content, space-between);
 	@include webkit-prefix(align-items, flex-end);
 	p {
-		width: 48.75%;
+		width: 32%;
 	}
 	select {
 		width: 100%;
@@ -15,4 +15,19 @@
 	label {
 		margin-bottom: 0;
 	}
+	.label-comment {
+		font-weight: 400;
+	    font-size: .85rem;
+	    display: inline-block;
+	}
+	.agree-checkbox {
+		.wpcf7-list-item {
+			margin-left: 0;
+		}
+	}
+}
+.step-title {
+	width: 100%;
+	font-size: 1.3rem;
+	margin-bottom: 2.5rem;
 }

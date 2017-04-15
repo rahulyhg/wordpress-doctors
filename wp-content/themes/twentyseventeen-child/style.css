@@ -59,13 +59,24 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
   -webkit-align-items: flex-end;
   align-items: flex-end; }
   .wpcf7-form p {
-    width: 48.75%; }
+    width: 32%; }
   .wpcf7-form select {
     width: 100%; }
   .wpcf7-form textarea {
     height: 15vh; }
   .wpcf7-form label {
     margin-bottom: 0; }
+  .wpcf7-form .label-comment {
+    font-weight: 400;
+    font-size: .85rem;
+    display: inline-block; }
+  .wpcf7-form .agree-checkbox .wpcf7-list-item {
+    margin-left: 0; }
+
+.step-title {
+  width: 100%;
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem; }
 
 .candidates-table {
   width: 100%;
