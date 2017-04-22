@@ -64,8 +64,8 @@ function renderPayPalBtn () {
 
 jQuery( document ).ready(function() {
 	jQuery(".wpcf7").on('wpcf7:mailsent', function(event) {
-		sendFormData(jQuery(".wpcf7-form"));
 		jQuery(".wpcf7").slideUp(800);
+		sendFormData(jQuery(".wpcf7-form"));
 		// jQuery(".paypal-container").slideDown(800)
 		// renderPayPalBtn ()
 		//location = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GLEFQQ8ZKQKT8';
