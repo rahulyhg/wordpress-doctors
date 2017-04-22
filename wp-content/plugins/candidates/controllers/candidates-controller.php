@@ -1,9 +1,5 @@
 <?php
     $path = $_SERVER['DOCUMENT_ROOT'];
-    
-    if (strpos($path, 'd400800') !== false) {
-        $path = $_SERVER['DOCUMENT_ROOT']."/doctors";
-    }
 
     require_once $path . '/wp-config.php';
     require_once $path . '/wp-load.php';
@@ -45,8 +41,4 @@
         $result = $wpdb->get_results (" SELECT * FROM $table_name WHERE `deleted` = 0 ");
         echo json_encode($result);
     }
-
-
-
-
 ?>
