@@ -538,6 +538,9 @@ body.has-header-image .site-description {
     opacity: 1; }
   100% {
     opacity: 0; } }
+.home .countdown-wrapper {
+  display: block; }
+
 .countdown-wrapper {
   top: 25%;
   left: 55%;
@@ -545,7 +548,8 @@ body.has-header-image .site-description {
   padding: 1% 0;
   position: absolute;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.35); }
+  background-color: rgba(0, 0, 0, 0.35);
+  display: none; }
   .countdown-wrapper h2, .countdown-wrapper p {
     color: white; }
   .countdown-wrapper h2 {
