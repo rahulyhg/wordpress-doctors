@@ -74,16 +74,6 @@
   line-height: 87px;
   border-radius: 6px;
   background: #000;
-  @media(max-width: 600px) {
-    width: 48px;
-  }
-  @media(max-width: 460px) {
-    width: 44px;
-  }
-  @media(max-width: 420px) {
-    height: 60px;
-    width: 40px;
-  }
 }
 
 .flip-clock-wrapper ul li {
@@ -95,9 +85,6 @@
   height: 100%;
   line-height: 87px;
   text-decoration: none !important;
-  @media(max-width: 420px) {
-    line-height: 60px;
-  }
 }
 
 .flip-clock-wrapper ul li:first-child {
@@ -171,12 +158,6 @@
   background-color: #333;
   border-radius: 6px;
   font-size: 70px;
-  @media(max-width: 460px) {
-    font-size: 50px
-  }
-  @media(max-width: 420px) {
-    font-size: 42px
-  }
 }
 
 .flip-clock-wrapper ul li a div.up div.inn {
@@ -449,3 +430,48 @@
 
   100% {
     opacity: 0; } }
+
+@media(max-width: 950px) {
+  .flip-clock-wrapper ul {
+    width: 48px;
+    height: 80px;
+    li {
+      line-height: 80px;
+      a div div.inn {
+        font-size: 55px;
+      }
+    }
+  }
+}
+@media(max-width: 790px) {
+  .flip-clock-wrapper ul {
+    width: 44px;
+    li {
+      a div div.inn {
+        font-size: 50px;
+      }
+    }
+  }
+}
+@media(max-width: 460px) {
+  .flip-clock-wrapper ul {
+    width: 44px;
+    li {
+      a div div.inn {
+        font-size: 50px;
+      }
+    }
+  }
+}
+@media(max-width: 420px) {
+  .flip-clock-wrapper ul {
+    height: 60px;
+    width: 40px;
+    li {
+      line-height: 60px;
+      a div div.inn {
+        font-size: 42px;
+      }
+    }
+  }
+}
