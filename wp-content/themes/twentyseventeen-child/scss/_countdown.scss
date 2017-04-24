@@ -1,0 +1,65 @@
+.countdown-wrapper {
+	top: 25%;
+	left: 55%;
+	z-index: 999;
+	padding: 1% 0;
+	position: absolute;
+	text-align: center;
+	background-color: rgba(0,0,0,.35);
+	h2, p {
+		color: white;
+	}
+	h2 {
+		font-weight: 600;
+	}
+	p {
+		width: 65%;
+		font-weight: 600;
+		margin: 12px auto 0;
+	}
+	.registration-btn {
+		width: 194px;
+		height: 42px;
+		color: white;
+		display: block;
+		cursor: pointer;
+		line-height: 42px;
+	    margin: 42px auto 0;
+		text-decoration: none;
+		background-color: #009900;
+	}
+	@media(max-width: 1366px){
+		width: 45%;
+		left: 50%;
+	}
+	@media(max-width: 1050px){
+		width: 50%;
+	}
+	@media(max-width: 768px){
+		top: 5%;
+		width: 90%;
+		padding: 0 0 3%;
+		@include css3-prefix(transform, translateX(-50%));
+		h2 {
+			margin: 2% 0 0 0;
+		}
+		p {
+			width: 85%;
+			font-size: .8rem;
+		}
+		.registration-btn {
+			margin-top: 12px;
+		}
+	}
+}
+#flipclock {
+	@media(max-width: 1366px){
+		@include css3-prefix(transform, scale(.9));
+	}
+	@media(max-width: 1050px){
+		@include css3-prefix(transform, scale(.75));
+	}
+	@media(max-width: 600px){
+		@include css3-prefix(transform, scale(.65));
+	}
+}
