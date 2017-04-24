@@ -11,8 +11,9 @@
 
 	// registering javascript files
 	function my_theme_enqueue_js() {
-	    wp_enqueue_script('child-custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array(), $ver = null);
 	    wp_enqueue_script('paypal-checkout', 'https://www.paypalobjects.com/api/checkout.js', array(), $ver = null);
+	    wp_enqueue_script('flipclock-min', get_stylesheet_directory_uri() . '/js/flipclock.min.js', array(), $ver = null);
+	    wp_enqueue_script('child-custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array('flipclock-min'), $ver = null);
 	}
 	add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_js' );
 
