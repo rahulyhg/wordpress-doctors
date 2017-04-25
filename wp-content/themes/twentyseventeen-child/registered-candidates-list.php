@@ -1,4 +1,4 @@
-<?php
+R<?php
 /**
  * Template Name: Registered candidates list
  * The template for a list of the registered candidates

@@ -11,6 +11,47 @@
 */
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900");
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.content-heading {
+  font-size: 3rem;
+  color: #0476b5;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif; }
+
+.subheading {
+  padding: 0;
+  color: #202020;
+  color: #0476b5;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 2.5rem 0 0.5rem;
+  font-family: 'Roboto', sans-serif; }
+
+.content-paragraph {
+  color: #444;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto', sans-serif; }
+  .content-paragraph b {
+    font-weight: 600; }
+  .content-paragraph.larger {
+    font-size: 2rem; }
+  .content-paragraph.centered {
+    text-align: center; }
+  .content-paragraph.stressed {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #0476b5; }
+  .content-paragraph.narrow {
+    padding: 2% 20%; }
+
+.bullets {
+  font-size: 1.5rem;
+  padding-left: 5rem; }
+
 /* Grid: start */
 @media screen and (min-width: 48em) {
   .wrap {
@@ -24,7 +65,7 @@ body.page-two-column:not(.archive) #primary .entry-content {
   width: 100%; }
 
 body.page:not(.twentyseventeen-front-page) .entry-title {
-  font-size: 1.5rem; }
+  font-size: 2.5rem; }
 
 .has-sidebar:not(.error404) #primary {
   width: 100%; }
@@ -45,6 +86,14 @@ body.has-header-image .site-description {
   padding: 1em;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.25) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+
+.navigation-top {
+  -webkit-box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.2);
+  -khtml-box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.2); }
 
 .section-image {
   background-color: #dddddd; }
@@ -625,19 +674,5 @@ body.has-header-image .site-description {
     -ms-transform: scale(0.65);
     -o-transform: scale(0.65);
     transform: scale(0.65); } }
-
-.content-heading {
-  font-size: 3rem;
-  color: #0476b5;
-  font-weight: 800; }
-
-.content-paragraph {
-  font-size: 1.25rem;
-  margin-bottom: 1rem; }
-  .content-paragraph b {
-    font-size: 1.5rem;
-    font-weight: 600; }
-  .content-paragraph.larger {
-    font-size: 1.75rem; }
 
 /*# sourceMappingURL=style.css.map */
