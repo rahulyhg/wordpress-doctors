@@ -1,0 +1,16 @@
+.content-heading {
+	font-size: 3rem;
+	color: $mainblue;
+	font-weight: 800;
+}
+.content-paragraph {
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+	b {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+	&.larger {
+		font-size: 1.75rem;
+	}
+}
