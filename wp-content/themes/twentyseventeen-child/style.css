@@ -626,4 +626,18 @@ body.has-header-image .site-description {
     -o-transform: scale(0.65);
     transform: scale(0.65); } }
 
+.content-heading {
+  font-size: 3rem;
+  color: #0476b5;
+  font-weight: 800; }
+
+.content-paragraph {
+  font-size: 1.25rem;
+  margin-bottom: 1rem; }
+  .content-paragraph b {
+    font-size: 1.5rem;
+    font-weight: 600; }
+  .content-paragraph.larger {
+    font-size: 1.75rem; }
+
 /*# sourceMappingURL=style.css.map */
