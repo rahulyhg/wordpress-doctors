@@ -70,13 +70,5 @@ jQuery( document ).ready(function() {
 		// renderPayPalBtn ()
 		//location = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GLEFQQ8ZKQKT8';
 	});
-
-	console.log("nanana");
-	var clock = jQuery('#flipclock').FlipClock(3600 * 24 * 3, {
-		clockFace: 'DailyCounter',
-		countdown: true,
-		showSeconds: false
-	});
-
 });
 
