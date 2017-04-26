@@ -1,7 +1,9 @@
-var ourLocation = window.location.href;
-var controllerUrl = ( ourLocation.indexOf("benjamin400800.com") == -1 ) ? "/wp-content/themes/twentyseventeen-child/controllers/registration-controller.php" : "/doctors//wp-content/themes/twentyseventeen-child/controllers/registration-controller.php";
+var controllerUrl = "/wp-content/themes/twentyseventeen-child/controllers/registration-controller.php"
 
 function sendFormData (formSubmitted) {
+	var randomString = Math.random().toString(36).substring(2, 12);
+	jQuery("#user-token").val(randomString);
+	console.log(formSubmitted.serialize())
 	jQuery.ajax({
 	    url: controllerUrl,
 	    type: "POST",
