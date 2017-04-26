@@ -7,6 +7,7 @@
 				<table class="candidates-table">
 					<tr>
 					    <th ng-click="sortType = 'name'; reverseValue=false;">Full name</th>
+					    <th>Token</th>
 						<th ng-click="sortType = 'email'; reverseValue=false;">Email</th>
 						<th ng-click="sortType = 'phone'; reverseValue=false;">Phone</th>
 						<th ng-click="sortType = 'address'; reverseValue=false;">Address</th>
@@ -17,6 +18,7 @@
 					</tr>
 				 	<tr ng-repeat="x in candidates | orderBy : sortType : reverseValue ">
 						<td>{{ x.name }} {{ x.surname }}</td>
+						<td>{{ x.token }}</td>
 						<td>{{ x.email }}</td>
 						<td>{{ x.phone }}</td>
 						<td>{{ x.address }}</td>

@@ -11,7 +11,7 @@
 
 $table_name = $wpdb->prefix . "candidates";
 $candidates = $wpdb->get_results ("
-	SELECT `name`, `surname`, `email`, `status`, `registration_date`
+	SELECT `name`, `token`, `status`, `registration_date`
 	FROM 	$table_name 
 	WHERE 	$table_name.`status` = 1
 	AND		$table_name.`deleted` = 0
@@ -35,14 +35,14 @@ get_header(); ?>
 					<?php if($candidates): ?>
 					<table class="candidates-table">
 						<tr>
-						    <th>Full name</th>
-							<th>Email</th>
+						    <th>Name</th>
+							<th>Token</th>
 							<th>Registration date</th>
 						</tr>
 						<?php foreach ($candidates as $candidate): ?>
 							<tr>
-								<td><?=$candidate->name ." ". $candidate->surname; ?></td>
-								<td><?=$candidate->email; ?></td>
+								<td><?=$candidate->name; ?></td>
+								<td><?=$candidate->token; ?></td>
 								<td><?=$candidate->registration_date; ?></td>
 							</tr>					
 						<?php endforeach; ?>
