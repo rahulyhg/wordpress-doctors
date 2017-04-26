@@ -9,6 +9,12 @@
  */
 
 ?>
+<?php
+	$date1 = new DateTime();
+	$date2 = new DateTime('07/25/2017');
+	$currentTime = $date1->getTimestamp();
+	$lotteryEnd = $date2->getTimestamp();
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
 
 	<?php if ( has_post_thumbnail() ) :
@@ -45,3 +51,12 @@
 	</div><!-- .panel-content -->
 
 </article><!-- #post-## -->
+
+<script>
+	var lotteryEnd = "<?=$lotteryEnd-$currentTime;?>"
+	var clock = jQuery('#flipclock').FlipClock(parseInt(lotteryEnd), {
+		clockFace: 'DailyCounter',
+		countdown: true,
+		showSeconds: false
+	});
+</script>
