@@ -57,6 +57,11 @@
 			margin-top: 12px;
 		}
 	}
+	@media(max-width: 500px){
+		.registration-btn {
+			margin-top: 0;
+		}
+	}
 }
 #flipclock {
 	@media(max-width: 1366px){

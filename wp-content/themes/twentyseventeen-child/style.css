@@ -12,6 +12,13 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900");
+@media (max-width: 500px) {
+  html {
+    font-size: 13px; } }
+@media (max-width: 420px) {
+  html {
+    font-size: 11px; } }
+
 body {
   font-family: 'Roboto', sans-serif; }
 
@@ -581,6 +588,14 @@ body.has-header-image .site-description {
     width: 44px; }
     .flip-clock-wrapper ul li a div div.inn {
       font-size: 50px; } }
+@media (max-width: 768px) {
+  .flip-clock-divider .flip-clock-label,
+  .flip-clock-divider.minutes .flip-clock-label {
+    right: -75px; }
+
+  .flip-clock-divider .flip-clock-label,
+  .flip-clock-divider.minutes .flip-clock-label {
+    top: 100px; } }
 @media (max-width: 460px) {
   .flip-clock-wrapper ul {
     width: 44px; }
@@ -593,7 +608,42 @@ body.has-header-image .site-description {
     .flip-clock-wrapper ul li {
       line-height: 60px; }
       .flip-clock-wrapper ul li a div div.inn {
-        font-size: 42px; } }
+        font-size: 42px; }
+
+  .flip-clock-divider .flip-clock-label {
+    font-size: 1.5rem; }
+
+  .flip-clock-divider .flip-clock-label,
+  .flip-clock-divider.minutes .flip-clock-label {
+    top: 80px; }
+
+  .flip-clock-divider {
+    height: 90px; }
+
+  .flip-clock-dot.top {
+    top: 20px; }
+
+  .flip-clock-dot.bottom {
+    top: 40px; } }
+@media (max-width: 380px) {
+  .flip-clock-wrapper ul {
+    width: 35px; }
+
+  .flip-clock-divider .flip-clock-label,
+  .flip-clock-divider.minutes .flip-clock-label {
+    right: -65px; } }
+@media (max-width: 350px) {
+  .flip-clock-wrapper ul {
+    height: 50px;
+    width: 30px; }
+    .flip-clock-wrapper ul li {
+      line-height: 50px; }
+      .flip-clock-wrapper ul li a div div.inn {
+        font-size: 36px; }
+
+  .flip-clock-divider .flip-clock-label,
+  .flip-clock-divider.minutes .flip-clock-label {
+    top: 65px; } }
 .home .countdown-wrapper {
   display: block; }
 
@@ -649,6 +699,9 @@ body.has-header-image .site-description {
         font-size: .8rem; }
       .countdown-wrapper .registration-btn {
         margin-top: 12px; } }
+  @media (max-width: 500px) {
+    .countdown-wrapper .registration-btn {
+      margin-top: 0; } }
 
 @media (max-width: 1366px) {
   #flipclock {
