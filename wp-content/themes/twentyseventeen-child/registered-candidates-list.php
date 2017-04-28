@@ -52,7 +52,7 @@ get_header(); ?>
 					<?php endif; ?>
 				</div>
 				<div class="col-3">
-					<?php sidebar_posts (5); ?>
+					<?php sidebar_posts (5, 'People Stories'); ?>
 				</div>
 			</section>
 

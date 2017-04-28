@@ -37,13 +37,15 @@
 				</div><!-- .wrap -->
 			</div><!-- .navigation-top -->
 		<?php endif; ?>
-
-		<section class="countdown-wrapper">
-			<h2>Registration ends in:</h2>
-			<div id="flipclock"></div>
-			<a class="registration-btn" href="/registration" title="To the registration">Register now</a>
-			<p>Ensure your place in the coming lottery and come to assure your future in Israel</p>
-		</section>
+		
+		<?php if(is_front_page()): ?>
+			<section class="countdown-wrapper">
+				<h2>Registration ends in:</h2>
+				<div id="flipclock"></div>
+				<a class="registration-btn" href="/registration" title="To the registration">Register now</a>
+				<p>Ensure your place in the coming lottery and come to assure your future in Israel</p>
+			</section>
+		<?php endif; ?>
 
 	</header><!-- #masthead -->
 
