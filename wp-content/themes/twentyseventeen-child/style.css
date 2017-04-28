@@ -102,6 +102,11 @@ body.has-header-image .site-description {
   -o-box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.2); }
 
+.entry-content:after {
+  content: "";
+  clear: both;
+  display: table; }
+
 .section-image {
   background-color: #dddddd; }
   .section-image:after {
@@ -121,6 +126,20 @@ body.has-header-image .site-description {
     font-style: italic;
     position: relative;
     top: -24px; }
+
+.custom-posts-wrapper .custom-post-item-wrapper {
+  -webkit-display: flex;
+  display: flex; }
+.custom-posts-wrapper .custom-post-thumbnail {
+  height: 124px;
+  min-width: 124px;
+  max-width: 124px;
+  background-color: #ddd;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+.custom-posts-wrapper .custom-post-content {
+  padding: 0 3%; }
 
 .wpcf7-form {
   -webkit-display: flex;
@@ -644,9 +663,6 @@ body.has-header-image .site-description {
   .flip-clock-divider .flip-clock-label,
   .flip-clock-divider.minutes .flip-clock-label {
     top: 65px; } }
-.home .countdown-wrapper {
-  display: block; }
-
 .countdown-wrapper {
   top: 25%;
   left: 55%;
@@ -654,8 +670,7 @@ body.has-header-image .site-description {
   padding: 1% 0;
   position: absolute;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.34);
-  display: none; }
+  background-color: rgba(0, 0, 0, 0.34); }
   .countdown-wrapper h2, .countdown-wrapper p {
     color: white; }
   .countdown-wrapper h2 {

@@ -38,6 +38,14 @@
 		<div class="wrap">
 
 			<div class="entry-content">
+				<div class="row">
+					<div class="col-8">
+						<?php get_custom_posts (5, 'Happy Customers', 'Happy Customers Say:', 'happy-customers', false); ?>
+					</div>
+					<div class="col-4">
+						<?php sidebar_posts (5, 'People Stories'); ?>
+					</div>
+				</div>
 				<?php
 					/* translators: %s: Name of current post */
 					the_content( sprintf(
@@ -46,6 +54,7 @@
 					) );
 				?>
 			</div><!-- .entry-content -->
+
 
 		</div><!-- .wrap -->
 	</div><!-- .panel-content -->

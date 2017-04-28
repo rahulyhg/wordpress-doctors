@@ -20,5 +20,22 @@
 	    font-style: italic;
 	    position: relative;
 	    top: -24px;
-		}
+	}
+}
+.custom-posts-wrapper {
+	.custom-post-item-wrapper {
+		@include webkit-prefix(display, flex);
+	}
+	.custom-post-thumbnail {
+		height: 124px;
+		min-width: 124px;
+		max-width: 124px;
+		background-color: #ddd;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.custom-post-content {
+		padding: 0 3%;
+	}
 }

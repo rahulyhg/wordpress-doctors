@@ -17,12 +17,12 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_js' );
 
-	function sidebar_posts ($postsNumber) {
+	function sidebar_posts ($postsNumber, $postsCategoryName) {
 		?> <div class="sidebar-posts">
-			<h2>Recent stories:</h2>
+			<h2>Stories of Success:</h2>
 			<?php 
 				global $post;
-				$args = array( 'posts_per_page' => $postsNumber );
+				$args = array( 'posts_per_page' => $postsNumber, 'category_name' => $postsCategoryName );
 				$lastposts = get_posts( $args );
 				foreach ( $lastposts as $post ):
 				setup_postdata( $post );
@@ -35,3 +35,42 @@
 			</div>
 			<?php wp_reset_postdata();
 	}
+	/*
+		(int)$postsNumber
+		(str)$postsCategoryName
+		(str)$wrapper - class name of the posts container
+		(str)$postsHeading - section heading
+		(bool)$clickable - whether to include a links to the post page
+	*/
+	function get_custom_posts ($postsNumber, $postsCategoryName, $postsHeading, $wrapper, $clickable=true) {
+		?> <?php if($postsHeading && $postsHeading !="") { echo "<h2>".$postsHeading."</h2>"; } ?>
+			<div class="<?=$wrapper?> row custom-posts-wrapper">
+		<?php	
+			global $post;
+			$args = array( 'posts_per_page' => $postsNumber, 'category_name' => $postsCategoryName );
+			$lastposts = get_posts( $args );
+			foreach ( $lastposts as $post ):
+			setup_postdata( $post );
+		?>
+				<div class="custom-post-item-wrapper">
+					<?php if($clickable): ?>
+						<div class="custom-post-thumbnail">
+							<a style="background-image: url(<?php the_post_thumbnail_url('medium_large'); ?>)" href="<?php the_permalink(); ?>"></a>
+						</div>
+						<div class="custom-post-content">
+							<h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+							<p><?php the_content(); ?></p>
+						</div>
+					<?php else: ?>
+						<div style="background-image: url(<?php the_post_thumbnail_url('medium_large'); ?>)" class="custom-post-thumbnail"></div>
+						<div class="custom-post-content">
+							<h6><span><?php the_title(); ?></span></h6>
+							<p><?php the_content(); ?></p>
+						</div>
+					<?php endif; ?>
+				</div>
+			<?php endforeach; ?> 
+			</div>
+			<?php wp_reset_postdata();
+	}
+
