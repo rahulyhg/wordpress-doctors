@@ -38,6 +38,13 @@
 		<div class="wrap">
 
 			<div class="entry-content">
+				<?php
+					/* translators: %s: Name of current post */
+					the_content( sprintf(
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+						get_the_title()
+					) );
+				?>
 				<div class="row">
 					<div class="col-8">
 						<?php get_custom_posts (5, 'Happy Customers', 'Happy Customers Say:', 'happy-customers', false); ?>
@@ -46,13 +53,6 @@
 						<?php sidebar_posts (5, 'People Stories'); ?>
 					</div>
 				</div>
-				<?php
-					/* translators: %s: Name of current post */
-					the_content( sprintf(
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-						get_the_title()
-					) );
-				?>
 			</div><!-- .entry-content -->
 
 
