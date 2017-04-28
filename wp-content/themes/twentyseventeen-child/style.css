@@ -127,6 +127,13 @@ body.has-header-image .site-description {
     position: relative;
     top: -24px; }
 
+.frontpage-posts-section {
+  margin-top: 10%; }
+  @media (max-width: 500px) {
+    .frontpage-posts-section h2 {
+      font-size: 3rem;
+      text-align: center; } }
+
 .custom-posts-wrapper .custom-post-item-wrapper {
   -webkit-display: flex;
   display: flex; }
@@ -140,6 +147,23 @@ body.has-header-image .site-description {
   background-position: center center; }
 .custom-posts-wrapper .custom-post-content {
   padding: 0 3%; }
+@media (max-width: 500px) {
+  .custom-posts-wrapper .custom-post-item-wrapper {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .custom-posts-wrapper .custom-post-thumbnail {
+    height: auto;
+    min-width: 100%;
+    max-width: 100%; }
+    .custom-posts-wrapper .custom-post-thumbnail:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%; }
+  .custom-posts-wrapper .custom-post-content h6 {
+    font-size: 2rem;
+    margin-top: 1rem; }
+  .custom-posts-wrapper .custom-post-content p {
+    font-size: 1.25rem; } }
 
 .wpcf7-form {
   -webkit-display: flex;
@@ -207,6 +231,9 @@ body.has-header-image .site-description {
       content: "";
       display: block;
       padding-bottom: 65%; }
+@media (max-width: 500px) {
+  .sidebar-posts h4 {
+    font-size: 2rem; } }
 
 /* Get the bourbon mixin from http://bourbon.io */
 /* Reset */
