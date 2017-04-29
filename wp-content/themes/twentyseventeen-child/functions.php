@@ -42,8 +42,8 @@
 		(str)$postsHeading - section heading
 		(bool)$clickable - whether to include a links to the post page
 	*/
-	function get_custom_posts ($postsNumber, $postsCategoryName, $postsHeading, $wrapper, $clickable=true) {
-		?> <?php if($postsHeading && $postsHeading !="") { echo "<h2>".$postsHeading."</h2>"; } ?>
+	function get_custom_posts ($postsNumber, $postsCategoryName, $postsHeading, $wrapper, $clickable=true, $includeText=true) {
+		?> <?php if($postsHeading && $postsHeading !="") { echo "<h2 class='custom-posts-heading'>".$postsHeading."</h2>"; } ?>
 			<div class="<?=$wrapper?> row custom-posts-wrapper">
 		<?php	
 			global $post;
@@ -65,7 +65,9 @@
 						<div style="background-image: url(<?php the_post_thumbnail_url('medium_large'); ?>)" class="custom-post-thumbnail"></div>
 						<div class="custom-post-content">
 							<h6><span><?php the_title(); ?></span></h6>
-							<p><?php the_content(); ?></p>
+							<?php if($includeText): ?>
+								<p><?php the_content(); ?></p>
+							<?php endif; ?>
 						</div>
 					<?php endif; ?>
 				</div>

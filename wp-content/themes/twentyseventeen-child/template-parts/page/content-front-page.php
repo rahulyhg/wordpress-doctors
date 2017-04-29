@@ -46,11 +46,8 @@
 					) );
 				?>
 				<div class="row frontpage-posts-section">
-					<div class="col-12 col-sm-8">
-						<?php get_custom_posts (5, 'Happy Customers', 'Happy Customers Say:', 'happy-customers', false); ?>
-					</div>
-					<div class="col-12 col-sm-4">
-						<?php sidebar_posts (5, 'People Stories'); ?>
+					<div class="col-12">
+						<?php get_custom_posts (5, 'Happy Customers', 'Happy Customers Say:', 'happy-customers', true, true); ?>
 					</div>
 				</div>
 			</div><!-- .entry-content -->
