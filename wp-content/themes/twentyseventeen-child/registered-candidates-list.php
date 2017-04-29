@@ -31,7 +31,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			
 			<section class="row">
-				<div class="col-9">
+				<div class="col-12">
 					<?php if($candidates): ?>
 					<table class="candidates-table">
 						<tr>
@@ -51,9 +51,10 @@ get_header(); ?>
 						<p>Here will be the list of the registered candidates, when there are such.</p>
 					<?php endif; ?>
 				</div>
-				<div class="col-3">
-					<?php sidebar_posts (5, 'People Stories'); ?>
-				</div>
+				<!-- <div class="col-5"> -->
+					<?//php sidebar_posts (5, 'People Stories'); ?>
+					<?//php get_custom_posts (3, 'Happy Customers', 'Happy Customers:', 'happy-customers', false, true); ?>
+				<!-- </div> -->
 			</section>
 
 		</main><!-- #main -->
